@@ -1,0 +1,474 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-montserrat;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: forestgreen;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  4% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  6% {
+    opacity: 0.45;
+    transform: scale(.85);
+  }
+
+  8% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+
+  10% {
+    opacity: 0.45;
+    transform: scale(.85);
+  }
+
+  11% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  12% {
+    opacity: 0.65;
+    transform: scale(1.15);
+  }
+
+  14% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+
+  16% {
+    opacity: 0.70;
+    transform: scale(1.13);
+  }
+
+  17% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+
+  19% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  20% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  24% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  26% {
+    opacity: 0.69;
+    transform: scale(1.11);
+  }
+
+  28% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  38% {
+    opacity: 0.45;
+    transform: scale(.85);
+  }
+
+  40% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  42% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+
+  44% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  46% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  56% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  58% {
+    opacity: 0.75;
+    transform: scale(1.25);
+  }
+
+  60% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  68% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: .6;
+    transform: scale(1.10);
+    /*peak*/
+  }
+
+  72% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  93% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  95% {
+    opacity: .6;
+    transform: scale(1.15);
+    /*peak*/
+  }
+
+  97% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+
+#campfire {
+  width: 44px;
+
+  #fore {
+    fill: #F4E718;
+    transform-origin: center bottom;
+    animation: flicker 3s infinite;
+  }
+
+  #back {
+    fill: #E7210C;
+    transform-origin: center bottom;
+    animation: flicker 3.5s infinite;
+  }
+
+  .dk {
+    fill: #321908;
+  }
+
+  .lt {
+    fill: #988255;
+  }
+}
+
+#app {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.xizmatlar:hover {
+  background-color: orangered;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.xizmatlar:hover .rasm {
+  transform: scale(1.1);
+}
+
+.uslugelink:hover {
+  box-shadow: 9px 9px 0 0 rgb(68, 25, 25);
+  transition: all 0.3s ease;
+}
+
+.rasm {
+  transition: all 0.2s ease;
+}
+
+.caruselLink:hover {
+  box-shadow: 9px 9px 0 0 rgba(43, 202, 3, 0.2);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dropdown */
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+  ul li .navlink {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  ul li .navlink {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+    font-size: 10px;
+    transition: all 0.3s ease;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.container{
+  width: 100%;
+  max-width: 1240px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-btn{
+  padding: 6px 24px;
+  background-color: rgb(11, 195, 121);
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal{
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.modal-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exit-btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-body{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+ul li ul.dropdown li {
+  display: block;
+  text-align: center;
+}
+
+ul li ul.dropdown {
+  width: 100%;
+  background: rgb(220, 220, 220);
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+.navlink2:hover .strelka {
+  transform: rotate(180deg);
+}
+
+.in {
+  color: black;
+}
+
+.in:hover {
+  background: #f40404;
+  color: white;
+}
+
+.bg {
+  background-image: url(./img/bgimg.webp);
+}
+
+.stats:hover {
+  transition: all 0.5s ease;
+}
+
+.partnyorlink:hover {
+  box-shadow: 9px 9px 0 0 rgb(116, 156, 95);
+  transition: all 0.3s ease;
+}
+
+.partnyor {
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.end-link {
+  text-decoration: underline;
+  font-weight: 300px;
+  color: orangered;
+  letter-spacing: 1px;
+}
+
+.footerLink {
+  color: #fcfcfc;
+  position: relative;
+  text-decoration: none;
+}
+
+.footerLink::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.footerLink:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+.footerLink {
+  transition: all 0.5s ease;
+}
+
+.okompanelink:hover {
+  transition: all 0.5s ease;
+}
+
+.VidOtdLink:hover .VidOtdImg {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.VidOtdLink {
+  display: block;
+  overflow: hidden;
+}
+
+.VidOtdImg {
+  transition: all 0.3s ease;
+}
+
+.aksiya:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.aksiya {
+  transition: all 0.3s ease;
+}
+
+.input-tel::placeholder{
+  padding-left: 20px;
+  color: gray;
+  font-size: large;
+}
